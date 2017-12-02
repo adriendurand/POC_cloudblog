@@ -21,5 +21,6 @@ docker-compose up -d
 // TODO
 * [Docker](https://www.docker.com/)
 * [MongoDB](https://www.mongodb.com/)
-* SpringBoot
-* Swagger
+* [SpringBoot](https://projects.spring.io/spring-boot/)
+* [Swagger](https://swagger.io/)
+* [Lombok](https://projectlombok.org/)

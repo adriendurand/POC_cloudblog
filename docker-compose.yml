@@ -1,0 +1,9 @@
+version: '2.1'
+services:
+  mongo:
+    container_name: cloudblog-mongo
+    image: mongo:3.4
+    ports:
+      - "27017:27017"
+    volumes:
+      - "/opt/mongodb/db:/data/db"

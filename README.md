@@ -40,7 +40,7 @@ java -jar target/poc-cloudblog-1.0-SNAPSHOT.jar
 * [Lombok](https://projectlombok.org/)
 * [SpringSecurity]() // TODO
 
-## Tips
+## Tips
 
 > Bash Git prompt: [https://github.com/magicmonty/bash-git-prompt](https://github.com/magicmonty/bash-git-prompt)
 

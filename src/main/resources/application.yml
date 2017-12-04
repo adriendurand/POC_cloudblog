@@ -1,0 +1,12 @@
+spring:
+    application:
+        name: CloudBlog
+    data:
+        mongodb:
+          ip: 172.19.0.2
+          port: 27017
+          db: cloudblog
+
+server:
+    port: 8080
+

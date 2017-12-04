@@ -24,6 +24,5 @@ public class User implements Serializable {
 
     private String lastName;
 
-    private List<String> roles;
 }
 

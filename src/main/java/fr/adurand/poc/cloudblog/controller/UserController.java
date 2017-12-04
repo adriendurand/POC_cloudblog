@@ -16,11 +16,6 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity getAll() {
-        return ResponseEntity.ok(userService.getAll());
-    }
-
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity getById(@PathVariable String id) {
         return userService.getById(id)
@@ -28,11 +23,16 @@ public class UserController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping(value = "/{email}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/email/{email}/", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity getByEmail(@PathVariable String email) {
         return userService.getByEmail(email)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
+    }
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity getAll() {
+        return ResponseEntity.ok(userService.getAll());
     }
 
     @PostMapping(value = "/createUser", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)

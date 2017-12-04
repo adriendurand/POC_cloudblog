@@ -10,25 +10,25 @@ import java.util.Optional;
 @Service
 public class UserService {
 
-    private final UserRepository repository;
+    private final UserRepository userRepository;
 
     public UserService(UserRepository repository) {
-        this.repository = repository;
+        this.userRepository = repository;
     }
 
     public List<User> getAll() {
-        return repository.findAll();
+        return userRepository.findAll();
     }
 
     public Optional<User> getById(String id) {
-        return Optional.ofNullable(repository.findOne(id));
+        return Optional.ofNullable(userRepository.findOne(id));
     }
 
     public Optional<User> getByEmail(String email) {
-        return Optional.ofNullable((repository.findOne(email)));
+        return Optional.ofNullable((userRepository.findByEmail(email)));
     }
 
     public User createUser(User user) {
-        return repository.insert(user);
+        return userRepository.insert(user);
     }
 }

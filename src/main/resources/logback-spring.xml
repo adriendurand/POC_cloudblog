@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml" />
+
     <root level="INFO" >
         <appender-ref ref="FILE" />
         <appender-ref ref="CONSOLE" />
     </root>
-    <logger name="fr.adurand.poc.cloudblog" level="DEBUG"  >
-    </logger>
+
+    <logger name="fr.adurand.poc.cloudblog" level="DEBUG" />
+
     <springProfile name="staging">
         <logger name="fr.adurand.poc.cloudblog" level="INFO" />
     </springProfile>

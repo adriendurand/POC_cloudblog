@@ -14,7 +14,8 @@ public class CloudblogServer {
 
     @RequestMapping("/")
     String home() {
-        logger.debug("TEST");
+        logger.debug("TEST: debug");
+        logger.info("TEST: info");
         return "Welcome to Cloudblog, the new generation of Skyblog.";
 
     }

@@ -12,6 +12,7 @@ docker exec -i -t cloudblog-mongo mongo
 * [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Maven 3.3](https://maven.apache.org/)
 * [Docker](https://www.docker.com/)
+* [Your favorite IDE](https://www.jetbrains.com/idea/download/)
 
 ## Deployment 
 // In progress
@@ -47,5 +48,5 @@ java -jar target/poc-cloudblog-1.0-SNAPSHOT.jar
 
 > Get container ip: docker inspect [CONTAINTER_ID]
 
-> Get container ip: docker inspect --format="{{.NetworkSettings.Networks.poccloudblog_default.IPAddress}}" cloudblog-mongo
+> Get container ip from container name: docker inspect --format="{{.NetworkSettings.Networks.poccloudblog_default.IPAddress}}" cloudblog-mongo
  
